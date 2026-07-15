@@ -1,261 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federico Leff Bejar — Interim &amp; Fractional Operating Executive</title>
+<meta name="description" content="Interim and fractional operating leadership for the handoffs that bleed. 24 years of P&amp;L across manufacturing, supply chain, and cross border US Mexico operations.">
+<style>
+  :root{
+    --void:#17130F;
+    --ink:#1D1913;
+    --panel:#241E16;
+    --panel-2:#2A2319;
+    --bone:#ECE5D7;
+    --bone-dim:#BBB1A0;
+    --faint:#8C8271;
+    --wine:#9A3339;
+    --wine-bright:#C25A53;
+    --wine-deep:#7B282D;
+    --rule:#342E24;
+    --rule-soft:#2A241B;
+    --paper:#ECE5D7;
+    --paper-ink:#1A1712;
+    --paper-dim:#5C5445;
+    --paper-rule:#CFC6B4;
+    --serif:Georgia,"Times New Roman",serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
+  body{
+    margin:0;background:var(--void);color:var(--bone);
+    font-family:var(--serif);font-size:18px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  a{color:var(--wine-bright);text-decoration:none;}
+  a:hover{color:var(--bone);}
+  a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--wine-bright);outline-offset:3px;}
+  .skip{position:absolute;left:-999px;top:0;background:var(--wine);color:#fff;padding:.6rem 1rem;z-index:20;font-family:var(--mono);font-size:.8rem;}
+  .skip:focus{left:0;}
 
-  <title>Federico “Freddy” Leff</title>
-  <meta name="description" content="Federico “Freddy” Leff — C-suite operator, cross-border builder, and founder of KIT55 Soma." />
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem);}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--wine-bright);font-weight:400;margin:0 0 1.4rem;}
+  .mono{font-family:var(--mono);}
 
-  <style>
-    :root {
-      --background: #f5f1ea;
-      --card: #ffffff;
-      --text: #1f2933;
-      --muted: #65717f;
-      --accent: #8a5a44;
-      --line: #ded6cc;
-    }
+  /* ---- button ---- */
+  .btn{
+    display:inline-block;font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+    background:var(--wine);color:#fff;padding:1rem 1.7rem;border:1px solid var(--wine);
+    transition:background .18s ease,border-color .18s ease,transform .18s ease;
+  }
+  .btn:hover{background:var(--wine-bright);border-color:var(--wine-bright);color:#fff;transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:var(--bone);border:1px solid var(--rule);}
+  .btn-ghost:hover{background:transparent;color:var(--bone);border-color:var(--wine-bright);transform:translateY(-1px);}
 
-    * {
-      box-sizing: border-box;
-    }
+  /* ---- top bar ---- */
+  .topbar{border-bottom:1px solid var(--rule);}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;padding-bottom:1.2rem;gap:1rem;}
+  .brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;letter-spacing:.01em;color:var(--bone);}
+  .brand span{color:var(--faint);font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-top:.15rem;font-weight:400;}
+  .topbar a.top-cta{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-dim);white-space:nowrap;}
+  .topbar a.top-cta:hover{color:var(--wine-bright);}
 
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at top left, rgba(138, 90, 68, 0.10), transparent 34%),
-        linear-gradient(135deg, #f8f5ef 0%, var(--background) 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  /* ---- hero ---- */
+  .hero{padding:clamp(4rem,11vw,8rem) 0 clamp(3.5rem,8vw,6rem);}
+  .hero h1{
+    font-family:var(--serif);font-weight:700;font-size:clamp(3rem,10vw,6.5rem);line-height:.98;letter-spacing:-.015em;
+    margin:0 0 1.6rem;max-width:15ch;
+  }
+  .hero .sub{font-size:clamp(1.05rem,2.3vw,1.35rem);color:var(--bone-dim);max-width:58ch;line-height:1.55;margin:0 0 2.6rem;}
+  .hero .sub b{color:var(--bone);font-weight:700;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:1rem 1.2rem;align-items:center;margin:0 0 2.4rem;}
+  .hero-cta .phone{font-family:var(--mono);font-size:.9rem;color:var(--bone-dim);letter-spacing:.04em;}
+  .hero-cta .phone:hover{color:var(--wine-bright);}
+  .cred{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;border-top:1px solid var(--rule-soft);padding-top:1.5rem;}
+  .cred b{color:var(--bone-dim);font-weight:400;}
 
-    .page {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 56px 22px;
-    }
+  /* ---- proof band (light) ---- */
+  .proof{background:var(--paper);color:var(--paper-ink);}
+  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-top:clamp(2.8rem,6vw,4rem);padding-bottom:clamp(2.8rem,6vw,4rem);}
+  .stat .n{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1;letter-spacing:-.01em;display:block;}
+  .stat .l{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--paper-dim);margin-top:.8rem;line-height:1.5;display:block;}
+  .stat .n .arrow{color:var(--wine);}
 
-    .hero {
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 48px;
-      box-shadow: 0 24px 70px rgba(31, 41, 51, 0.08);
-    }
+  /* ---- generic section ---- */
+  .section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--rule);}
+  .kicker{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1.6rem;max-width:20ch;}
+  .lead{color:var(--bone-dim);font-size:1.08rem;line-height:1.68;max-width:62ch;margin:0;}
+  .lead b{color:var(--bone);font-weight:700;}
 
-    .eyebrow {
-      font-family: Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 12px;
-      color: var(--accent);
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
+  /* ---- lanes ---- */
+  .lanes{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.6rem;}
+  .lane-card{background:var(--panel);border:1px solid var(--rule);padding:clamp(1.8rem,3vw,2.4rem);}
+  .lane-card .idx{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;color:var(--wine-bright);text-transform:uppercase;margin:0 0 1.1rem;}
+  .lane-card h3{font-family:var(--serif);font-weight:700;font-size:1.5rem;margin:0 0 .4rem;line-height:1.15;}
+  .lane-card h3 span{display:block;font-size:.98rem;color:var(--faint);font-weight:400;font-style:italic;margin-top:.35rem;}
+  .lane-card p{color:var(--bone-dim);font-size:1rem;line-height:1.62;margin:1.1rem 0 0;}
+  .lane-card p b{color:var(--bone);font-weight:700;}
 
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 0.95;
-      margin: 0;
-      letter-spacing: -0.04em;
-      font-weight: 400;
-    }
+  /* ---- receipts cards ---- */
+  .receipts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.6rem;}
+  .rc{background:var(--panel);border:1px solid var(--rule);padding:1.6rem 1.5rem;display:flex;flex-direction:column;transition:border-color .18s ease,transform .18s ease;}
+  .rc:hover{border-color:var(--wine);transform:translateY(-2px);}
+  .rc .ex{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 .9rem;}
+  .rc h4{font-family:var(--serif);font-weight:700;font-size:1.16rem;line-height:1.22;margin:0 0 .8rem;}
+  .rc p{color:var(--bone-dim);font-size:.94rem;line-height:1.55;margin:0 0 1.3rem;flex:1;}
+  .rc .res{font-family:var(--mono);font-size:.92rem;color:var(--wine-bright);font-weight:700;letter-spacing:.01em;line-height:1.4;border-top:1px solid var(--rule-soft);padding-top:1rem;}
 
-    .name-note {
-      margin-top: 14px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      font-size: 16px;
-    }
+  /* ---- record strip (light) ---- */
+  .record{background:var(--paper);color:var(--paper-ink);border-bottom:none;}
+  .record .kicker{color:var(--paper-ink);}
+  .record .note{font-family:var(--mono);font-size:.74rem;color:var(--paper-dim);letter-spacing:.04em;margin:0 0 2.4rem;text-transform:uppercase;}
+  .rec-row{display:grid;grid-template-columns:7.5rem 1fr 13rem;gap:.4rem 1.6rem;padding:1.15rem 0;border-top:1px solid var(--paper-rule);align-items:baseline;}
+  .rec-row:first-of-type{border-top:none;}
+  .rec-row .yr{font-family:var(--mono);font-size:.82rem;color:var(--wine);letter-spacing:.02em;}
+  .rec-row .rl{font-family:var(--serif);font-weight:700;font-size:1.12rem;line-height:1.2;}
+  .rec-row .rl span{font-family:var(--mono);font-size:.74rem;font-weight:400;text-transform:uppercase;letter-spacing:.1em;color:var(--paper-dim);display:block;margin-top:.3rem;}
+  .rec-row .rm{font-family:var(--mono);font-size:.82rem;color:var(--paper-ink);line-height:1.45;}
 
-    .intro {
-      margin-top: 36px;
-      max-width: 760px;
-      font-size: 22px;
-      line-height: 1.45;
-    }
+  /* ---- origin ---- */
+  .origin p{font-size:1.1rem;line-height:1.75;max-width:60ch;color:var(--bone-dim);margin:0 0 1.2rem;}
+  .origin p:last-child{margin:0;}
+  .origin p b{color:var(--bone);font-weight:700;}
 
-    .section-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 32px;
-    }
+  /* ---- cta (burgundy) ---- */
+  .cta{background:var(--wine-deep);color:#fff;border-bottom:none;text-align:center;padding:clamp(4rem,9vw,7rem) 0;}
+  .cta h2{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 .6rem;max-width:20ch;margin-left:auto;margin-right:auto;}
+  .cta .say{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,2rem);color:#F3E4E0;margin:0 0 2.6rem;}
+  .cta .btn{background:#fff;color:var(--wine-deep);border-color:#fff;}
+  .cta .btn:hover{background:var(--bone);border-color:var(--bone);color:var(--wine-deep);}
+  .cta .contact{font-family:var(--mono);font-size:.88rem;letter-spacing:.05em;color:#EAC9C6;margin-top:2.2rem;}
+  .cta .contact a{color:#fff;}
+  .cta .contact a:hover{color:var(--bone);}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 28px;
-    }
+  /* ---- footer ---- */
+  footer{padding:clamp(2.6rem,6vw,3.6rem) 0;}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;align-items:baseline;justify-content:space-between;}
+  .foot-name{font-family:var(--serif);font-weight:700;color:var(--bone);}
+  .foot-name span{display:block;font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.06em;margin-top:.3rem;font-weight:400;}
+  .foot-stamp{font-family:var(--serif);font-style:italic;color:var(--bone-dim);font-size:1.05rem;}
 
-    h2 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--accent);
-      margin: 0 0 14px;
-    }
-
-    p {
-      margin: 0 0 16px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    .full {
-      grid-column: 1 / -1;
-    }
-
-    .contact {
-      margin-top: 34px;
-      padding-top: 28px;
-      border-top: 1px solid var(--line);
-      font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .contact a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 2px;
-    }
-
-    .contact a:hover {
-      color: var(--accent);
-    }
-
-    .divider {
-      color: var(--muted);
-    }
-
-    footer {
-      margin-top: 26px;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    @media (max-width: 760px) {
-      .page {
-        padding: 28px 14px;
-      }
-
-      .hero {
-        padding: 30px 24px;
-        border-radius: 22px;
-      }
-
-      .section-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .full {
-        grid-column: auto;
-      }
-
-      .intro {
-        font-size: 19px;
-      }
-
-      .contact {
-        display: block;
-      }
-
-      .contact span,
-      .contact a {
-        display: block;
-        margin-bottom: 10px;
-      }
-
-      .divider {
-        display: none;
-      }
-    }
-  </style>
+  @media (max-width:900px){
+    .receipts-grid{grid-template-columns:repeat(2,1fr);}
+    .proof .wrap{grid-template-columns:repeat(2,1fr);gap:2.4rem 2rem;}
+  }
+  @media (max-width:640px){
+    body{font-size:16px;}
+    .lanes{grid-template-columns:1fr;}
+    .receipts-grid{grid-template-columns:1fr;}
+    .proof .wrap{grid-template-columns:1fr 1fr;}
+    .rec-row{grid-template-columns:1fr;gap:.3rem;}
+    .rec-row .yr{order:-1;}
+    .rec-row .rm{margin-top:.6rem;padding-top:.6rem;border-top:1px dashed var(--paper-rule);}
+    .topbar a.top-cta{display:none;}
+  }
+</style>
 </head>
-
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="eyebrow">Personal landing page</div>
+<a class="skip" href="#work">Skip to the work</a>
 
-      <h1>Federico Leff</h1>
-      <div class="name-note">Freddy to the people who know me.</div>
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Federico Leff Bejar<span>KIT55 Soma</span></div>
+    <a class="top-cta" href="mailto:fred.leff@kit55soma.com">Start a conversation</a>
+  </div>
+</div>
 
-      <p class="intro">
-        I have spent my career inside complex businesses where sales, operations, procurement,
-        finance, and execution all have to work as one system. Most of my work has lived at the
-        C-suite level or close to it: building markets, stabilizing operations, recovering margin,
-        and connecting the parts of a company that usually fail in separate rooms.
-      </p>
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Interim &amp; Fractional Operating Executive</p>
+    <h1>The seam nobody owns.</h1>
+    <p class="sub">Interim and fractional operating leadership for the handoffs that bleed. Broken lines between procurement, operations, and sales, on both sides of the US Mexico border. <b>24 years of P&amp;L.</b> I install the system, then I leave.</p>
+    <div class="hero-cta">
+      <a class="btn" href="mailto:fred.leff@kit55soma.com?subject=Operating%20mandate">Start a conversation</a>
+      <a class="phone" href="tel:+18582577536">or call 858 257 7536</a>
+    </div>
+    <p class="cred"><b>24 years P&amp;L &nbsp;·&nbsp; 3 companies acquired &nbsp;·&nbsp; cross border operator &nbsp;·&nbsp; manufacturing, supply chain, consumer goods</b></p>
+  </div>
+</div>
 
-      <div class="section-grid">
-        <div class="card">
-          <h2>Professional</h2>
-          <p>
-            I am a cross-border operator with deep experience in manufacturing, distribution,
-            hospitality, commercial real estate, procurement, and supply chain execution.
-          </p>
-          <p>
-            More than once, the work I built became valuable enough that someone else bought the
-            company or division. That is a strange kind of success: you build the thing well enough
-            that you make your own job unnecessary.
-          </p>
-        </div>
+<div class="proof">
+  <div class="wrap">
+    <div class="stat"><span class="n">$30M</span><span class="l">Built in 14 months, 40 to 50% gross margin</span></div>
+    <div class="stat"><span class="n">$0<span class="arrow"> → </span>$12M</span><span class="l">New US entity, 3 years, acquired</span></div>
+    <div class="stat"><span class="n">$15M<span class="arrow"> → </span>$28M</span><span class="l">400 people, 3 plants, union floor</span></div>
+    <div class="stat"><span class="n">3</span><span class="l">Companies acquired on my watch</span></div>
+  </div>
+</div>
 
-        <div class="card">
-          <h2>KIT55 Soma</h2>
-          <p>
-            KIT55 Soma is the natural continuation of everything I have done before. It is where my
-            operating experience, cross-border background, commercial instincts, and systems thinking
-            converge.
-          </p>
-          <p>
-            The work is simple to describe and hard to execute: find where the business is bleeding,
-            connect the broken seams, and leave behind an operating system that works.
-          </p>
-        </div>
+<div class="section" id="work">
+  <div class="wrap">
+    <h2 class="kicker">Everyone is telling the truth. The system is lying.</h2>
+    <p class="lead">Margin does not bleed inside a department. It bleeds in the handoff. Procurement optimizes procurement. Operations optimizes operations. Sales optimizes sales. Each one is doing its job, and the transaction between them is nobody's job. That gap is where the dead lines, the missed dates, and the eroding margin live. <b>I find the gap and I own it until it holds.</b> Then I hand you a system that runs without me and I leave.</p>
+  </div>
+</div>
 
-        <div class="card full">
-          <h2>Personal</h2>
-          <p>
-            I love reading history, psychology, and philosophy. The Stoics are my favorite because
-            they understood something that still matters: life is unpredictable, discipline matters,
-            and character is built in the reaction.
-          </p>
-          <p>
-            I enjoy travel, time with my family, and the friendships I have been lucky enough to build.
-            I also believe a sense of humor is one of the most important things in the world. At some
-            point, life teaches you to laugh with it instead of only trying to beat it into submission.
-          </p>
-        </div>
+<div class="section">
+  <div class="wrap">
+    <p class="eyebrow">How I operate</p>
+    <h2 class="kicker">Two lanes, one instinct.</h2>
+    <div class="lanes">
+      <div class="lane-card">
+        <p class="idx">Lane 01</p>
+        <h3>The channel<span>One buyer, twenty years.</span></h3>
+        <p>Three companies, three unrelated products, the same lodging buyer every time. San Diego Valet, Al Phillips, Blue Iceberg. Linen service, then dry cleaning, then consumer goods into hotels, and the buyer never changed. <b>I can walk into a hotel group and I already know who signs.</b></p>
       </div>
-
-      <div class="contact">
-        <span>I enjoy meeting people and making real connections.</span>
-        <span class="divider">|</span>
-        <a href="mailto:federico@federicoleff.com">federico@federicoleff.com</a>
-        <span class="divider">|</span>
-        <a href="tel:+18582577536">858 257 7536</a>
-        <span class="divider">|</span>
-        <a href="https://www.linkedin.com/in/federico-leff-25b613108" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="lane-card">
+        <p class="idx">Lane 02</p>
+        <h3>The border<span>Won on delivery, not on price.</span></h3>
+        <p>The same discipline where the commodity crosses a line and the sale is won on the certainty it arrives. Goodco, Tasoro, Suncast, Arizona Partsmaster. A US entity, Mexican production, and me personally liable in the seam. USMCA, landed cost, brokerage, FOB Laredo, door to door. <b>It requires having been on the hook on both sides.</b></p>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
 
-    <footer>
-      © 2026 Federico “Freddy” Leff
-    </footer>
-  </main>
+<div class="section">
+  <div class="wrap">
+    <p class="eyebrow">Proof, not adjectives</p>
+    <h2 class="kicker">The receipts.</h2>
+    <p class="lead">Nine situations. Something structural broke, someone senior called, and I owned the seam that fixed it. Client names held back here and named in the room.</p>
+    <div class="receipts-grid">
+
+      <div class="rc"><p class="ex">Exhibit 01</p><h4>A publicly traded real estate operator</h4><p>Brokers sold as individuals and signature volume stayed invisible until the trimester closed. Rebuilt how they sold. Teams on a collective quota, volume visible months out.</p><div class="res">600+ leases · #2 in the division</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 02</p><h4>A builder going to market as an installer</h4><p>A branded line with no factory, defensible only on sourcing and delivery. Moved the base from 100% Asia to 65/35 Asia and Mexico, kitted stateside.</p><div class="res">$30M in 14 months · 40 to 50% GM</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 03</p><h4>A US entity standing up in COVID</h4><p>$25K China containers on six cent items while a plant sat idle. Built the Texas entity, the regulatory structure, and four consumer brands.</p><div class="res">$0 to $12M in 3 years · acquired</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 04</p><h4>A laundry carrying concentration risk</h4><p>Thirteen hotels under one signature. Closed the risk in one move with a ten hotel casino group, then built the scheduling system that held a 48 hour constraint.</p><div class="res">$15M to $28M · 400 people</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 05</p><h4>An electronics distributor being commoditized</h4><p>$5K on a pallet against $300K for the tech firms. Told the President to sell a service, not a product. Built digital signage from a cold start.</p><div class="res">Division acquired · integration run</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 06</p><h4>A hotel laundry at a hard ceiling</h4><p>A fixed bottleneck at 100 lbs dry cleaning and 10,000 lbs of whites per hour. Ran to the bottleneck plus a buffer and added shifts on an asset already paid for.</p><div class="res">$1.5M to $4.5M · acquired</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 07</p><h4>A one SKU US arm of a Mexican maker</h4><p>Sent to sell a product that was dead in the US on decorum and liability. Read the room and won on structure through trickle distribution, not on price.</p><div class="res">~$6M · 250 location remodel</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 08</p><h4>A roto molding maker shut down overnight</h4><p>A gas restriction killed production and the tooling was proprietary. Sourced steel molds to their geometry and made five factories behave as one vendor.</p><div class="res">750 units/truck · standing nearshore arm</div></div>
+
+      <div class="rc"><p class="ex">Exhibit 09</p><h4>A parts distributor with a severed China lane</h4><p>COVID took the China lane out entirely. Rebuilt the line in Mexico, held spec, ran QA on the floor. Door to door, sequenced to the delivery map.</p><div class="res">$6.88M across 11 POs</div></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section record">
+  <div class="wrap">
+    <h2 class="kicker">The record.</h2>
+    <p class="note">// Named, dated, defensible. Most recent first.</p>
+
+    <div class="rec-row"><div class="yr">2022 — now</div><div class="rl">Co-Founder &amp; Principal<span>KIT55 Soma</span></div><div class="rm">Sourcing · interim exec · cross border logistics</div></div>
+    <div class="rec-row"><div class="yr">2024 — 2025</div><div class="rl">Sr. Director, International Sales<span>Tasoro · KIT55 partnership</span></div><div class="rm">$30M / 14 months · 40 to 50% GM</div></div>
+    <div class="rec-row"><div class="yr">2020 — 2023</div><div class="rl">Managing Partner, US Entity<span>Blue Iceberg Labs</span></div><div class="rm">$0 → $12M · 60%+ GM · acquired</div></div>
+    <div class="rec-row"><div class="yr">2015 — 2020</div><div class="rl">VP, Commercial Sales<span>GICSA</span></div><div class="rm">600+ leases · reported to the Board</div></div>
+    <div class="rec-row"><div class="yr">2013 — 2015</div><div class="rl">VP, Audio Visual &amp; Digital Signage<span>Steren Electronics USA</span></div><div class="rm">Division acquired by CE Labs</div></div>
+    <div class="rec-row"><div class="yr">2010 — 2013</div><div class="rl">Director, US Market<span>Goodco</span></div><div class="rm">~$6M remodel · 250 locations</div></div>
+    <div class="rec-row"><div class="yr">2007 — 2010</div><div class="rl">VP, Sales, Marketing &amp; Operations<span>Al Phillips the Cleaner</span></div><div class="rm">$15M → $28M · 3 plants</div></div>
+    <div class="rec-row"><div class="yr">2002 — 2007</div><div class="rl">Director of Operations, then Sales<span>San Diego Valet Service</span></div><div class="rm">$1.5M → $4.5M · acquired</div></div>
+  </div>
+</div>
+
+<div class="section origin">
+  <div class="wrap">
+    <p class="eyebrow">Origin</p>
+    <p>Before any of it, a bench at the Salk Institute. I did molecular biology research in the Gleeson Lab during the Human Genome Project years.</p>
+    <p>That is where I learned to read a system by its anomalies. To find the one variable that moves everything downstream and leave the rest alone. <b>B.S. in Neurobiology and Physiology from UC San Diego, minor in World History.</b> No graduate degree. The lab is not here as a credential. It is here as the method.</p>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Something in your operation is bleeding at a handoff.</h2>
+    <p class="say">Let's find it.</p>
+    <a class="btn" href="mailto:fred.leff@kit55soma.com?subject=Operating%20mandate">Start a conversation</a>
+    <p class="contact"><a href="mailto:fred.leff@kit55soma.com">fred.leff@kit55soma.com</a> &nbsp;·&nbsp; <a href="tel:+18582577536">858 257 7536</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-name">Federico Leff Bejar<span>Co-Founder &amp; Principal · KIT55 Soma</span></div>
+    <div class="foot-stamp">The kit is complete. Or it isn't.</div>
+  </div>
+</footer>
+
 </body>
 </html>
