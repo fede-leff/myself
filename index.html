@@ -1,287 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Federico Leff Bejar — Interim &amp; Fractional Operating Executive</title>
-<meta name="description" content="Interim and fractional operating leadership for the handoffs that bleed. 24 years of P&amp;L across manufacturing, supply chain, and cross border US Mexico operations.">
+<title>KIT55 SOMA — We eliminate the space between them.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
 <style>
-  :root{
-    --void:#17130F;
-    --ink:#1D1913;
-    --panel:#241E16;
-    --panel-2:#2A2319;
-    --bone:#ECE5D7;
-    --bone-dim:#BBB1A0;
-    --faint:#8C8271;
-    --wine:#9A3339;
-    --wine-bright:#C25A53;
-    --wine-deep:#7B282D;
-    --rule:#342E24;
-    --rule-soft:#2A241B;
-    --paper:#ECE5D7;
-    --paper-ink:#1A1712;
-    --paper-dim:#5C5445;
-    --paper-rule:#CFC6B4;
-    --serif:Georgia,"Times New Roman",serif;
-    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
-  body{
-    margin:0;background:var(--void);color:var(--bone);
-    font-family:var(--serif);font-size:18px;line-height:1.6;
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  }
-  a{color:var(--wine-bright);text-decoration:none;}
-  a:hover{color:var(--bone);}
-  a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--wine-bright);outline-offset:3px;}
-  .skip{position:absolute;left:-999px;top:0;background:var(--wine);color:#fff;padding:.6rem 1rem;z-index:20;font-family:var(--mono);font-size:.8rem;}
-  .skip:focus{left:0;}
+:root{
+  --ink:#0C0B09;
+  --ink-2:#16130D;
+  --ink-3:#1D1912;
+  --bone:#EAE4D7;
+  --bone-dim:#9A9284;
+  --bone-faint:#8C857A;
+  --wound:#A62A1B;
+  --wound-lit:#CF4A34;
+  --wound-band:#17100E;
+  --suture:#3F7D63;
+  --suture-lit:#66A98A;
+  --suture-band:#0E1512;
+  --line:rgba(234,228,215,0.12);
+  --line-strong:rgba(234,228,215,0.22);
+  --serif:Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --col:760px;
+}
 
-  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem);}
-  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--wine-bright);font-weight:400;margin:0 0 1.4rem;}
-  .mono{font-family:var(--mono);}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--bone);
+  font-family:var(--serif);
+  font-size:18px;
+  line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+  font-variant-numeric:lining-nums;
+}
 
-  /* ---- button ---- */
-  .btn{
-    display:inline-block;font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
-    background:var(--wine);color:#fff;padding:1rem 1.7rem;border:1px solid var(--wine);
-    transition:background .18s ease,border-color .18s ease,transform .18s ease;
-  }
-  .btn:hover{background:var(--wine-bright);border-color:var(--wine-bright);color:#fff;transform:translateY(-1px);}
-  .btn-ghost{background:transparent;color:var(--bone);border:1px solid var(--rule);}
-  .btn-ghost:hover{background:transparent;color:var(--bone);border-color:var(--wine-bright);transform:translateY(-1px);}
+.wrap{max-width:var(--col);margin:0 auto;padding:0 28px;}
+.bleed{width:100%;}
+.section{padding:112px 0;}
+.section--tight{padding:88px 0;}
 
-  /* ---- top bar ---- */
-  .topbar{border-bottom:1px solid var(--rule);}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;padding-bottom:1.2rem;gap:1rem;}
-  .brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;letter-spacing:.01em;color:var(--bone);}
-  .brand span{color:var(--faint);font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-top:.15rem;font-weight:400;}
-  .topbar a.top-cta{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-dim);white-space:nowrap;}
-  .topbar a.top-cta:hover{color:var(--wine-bright);}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:0.8rem;
+  font-weight:500;
+  letter-spacing:0.24em;
+  text-transform:uppercase;
+  color:var(--bone-dim);
+  margin:0 0 30px;
+  display:flex;align-items:center;gap:14px;
+}
+.eyebrow::before{
+  content:"";width:26px;height:1px;background:var(--wound);flex:0 0 auto;
+}
+.eyebrow--suture::before{background:var(--suture);}
 
-  /* ---- hero ---- */
-  .hero{padding:clamp(4rem,11vw,8rem) 0 clamp(3.5rem,8vw,6rem);}
-  .hero h1{
-    font-family:var(--serif);font-weight:700;font-size:clamp(3rem,10vw,6.5rem);line-height:.98;letter-spacing:-.015em;
-    margin:0 0 1.6rem;max-width:15ch;
-  }
-  .hero .sub{font-size:clamp(1.05rem,2.3vw,1.35rem);color:var(--bone-dim);max-width:58ch;line-height:1.55;margin:0 0 2.6rem;}
-  .hero .sub b{color:var(--bone);font-weight:700;}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:1rem 1.2rem;align-items:center;margin:0 0 2.4rem;}
-  .hero-cta .phone{font-family:var(--mono);font-size:.9rem;color:var(--bone-dim);letter-spacing:.04em;}
-  .hero-cta .phone:hover{color:var(--wine-bright);}
-  .cred{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;border-top:1px solid var(--rule-soft);padding-top:1.5rem;}
-  .cred b{color:var(--bone-dim);font-weight:400;}
+h1,h2,h3{font-weight:700;margin:0;}
+h1{
+  font-size:clamp(2.5rem,6.4vw,4.7rem);
+  line-height:1.02;
+  letter-spacing:-0.018em;
+}
+h2{
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  line-height:1.08;
+  letter-spacing:-0.012em;
+}
+p{margin:0 0 1.25em;color:var(--bone);}
+p:last-child{margin-bottom:0;}
+.lede{color:var(--bone);}
+.dim{color:var(--bone-dim);}
+.wound{color:var(--wound-lit);}
+.big-line{
+  font-size:clamp(1.75rem,4vw,2.7rem);
+  line-height:1.12;
+  letter-spacing:-0.01em;
+  font-weight:700;
+}
 
-  /* ---- proof band (light) ---- */
-  .proof{background:var(--paper);color:var(--paper-ink);}
-  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-top:clamp(2.8rem,6vw,4rem);padding-bottom:clamp(2.8rem,6vw,4rem);}
-  .stat .n{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1;letter-spacing:-.01em;display:block;}
-  .stat .l{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--paper-dim);margin-top:.8rem;line-height:1.5;display:block;}
-  .stat .n .arrow{color:var(--wine);}
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 28px;
+  background:rgba(12,11,9,0);
+  transition:background .4s ease,border-color .4s ease;
+  border-bottom:1px solid transparent;
+}
+.topbar.scrolled{
+  background:rgba(12,11,9,0.82);
+  backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--bone);}
+.brand svg{display:block;flex:0 0 auto;}
+.brand .mark{width:34px;height:34px;display:block;object-fit:contain;}
+.wm-stack{display:flex;flex-direction:column;line-height:1;}
+.wm-1{font-family:var(--mono);font-size:0.98rem;font-weight:600;letter-spacing:0.14em;}
+.wm-2{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.42em;color:var(--bone-dim);margin-top:3px;}
+.topbar .tag{
+  font-family:var(--mono);font-size:0.8rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--bone-faint);
+}
+@media(max-width:600px){.topbar .tag{display:none;}}
 
-  /* ---- generic section ---- */
-  .section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--rule);}
-  .kicker{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1.6rem;max-width:20ch;}
-  .lead{color:var(--bone-dim);font-size:1.08rem;line-height:1.68;max-width:62ch;margin:0;}
-  .lead b{color:var(--bone);font-weight:700;}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--bone);color:var(--ink);padding:12px 18px;
+  font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;}
+.skip:focus{left:16px;top:16px;}
 
-  /* ---- lanes ---- */
-  .lanes{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.6rem;}
-  .lane-card{background:var(--panel);border:1px solid var(--rule);padding:clamp(1.8rem,3vw,2.4rem);}
-  .lane-card .idx{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;color:var(--wine-bright);text-transform:uppercase;margin:0 0 1.1rem;}
-  .lane-card h3{font-family:var(--serif);font-weight:700;font-size:1.5rem;margin:0 0 .4rem;line-height:1.15;}
-  .lane-card h3 span{display:block;font-size:.98rem;color:var(--faint);font-weight:400;font-style:italic;margin-top:.35rem;}
-  .lane-card p{color:var(--bone-dim);font-size:1rem;line-height:1.62;margin:1.1rem 0 0;}
-  .lane-card p b{color:var(--bone);font-weight:700;}
+.offer{
+  margin:44px 0 40px;padding:30px 32px;
+  border:1px solid var(--line-strong);border-left:3px solid var(--suture);
+  background:var(--ink-2);max-width:62ch;
+}
+.offer-h{
+  font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--suture-lit);margin:0 0 14px;
+}
+.offer p{font-size:1.05rem;line-height:1.62;color:var(--bone);margin:0 0 10px;}
+.offer .terms{
+  font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--bone-dim);margin:16px 0 0;
+}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;}
+.cta-alt{
+  font-family:var(--mono);font-size:0.85rem;letter-spacing:0.08em;
+  color:var(--bone-dim);text-decoration:none;border-bottom:1px solid var(--line-strong);
+  padding-bottom:2px;
+}
+.cta-alt:hover{color:var(--bone);border-bottom-color:var(--bone);}
 
-  /* ---- receipts cards ---- */
-  .receipts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.6rem;}
-  .rc{background:var(--panel);border:1px solid var(--rule);padding:1.6rem 1.5rem;display:flex;flex-direction:column;transition:border-color .18s ease,transform .18s ease;}
-  .rc:hover{border-color:var(--wine);transform:translateY(-2px);}
-  .rc .ex{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 .9rem;}
-  .rc h4{font-family:var(--serif);font-weight:700;font-size:1.16rem;line-height:1.22;margin:0 0 .8rem;}
-  .rc p{color:var(--bone-dim);font-size:.94rem;line-height:1.55;margin:0 0 1.3rem;flex:1;}
-  .rc .res{font-family:var(--mono);font-size:.92rem;color:var(--wine-bright);font-weight:700;letter-spacing:.01em;line-height:1.4;border-top:1px solid var(--rule-soft);padding-top:1rem;}
+.hero{
+  position:relative;
+  padding:190px 0 120px;
+  overflow:hidden;
+}
+.hero-inner{position:relative;z-index:2;}
+.hero h1{max-width:18ch;margin-bottom:14px;}
+.hero h1 .accent{color:var(--wound-lit);}
+.hero-sub{
+  font-family:var(--mono);font-size:0.82rem;letter-spacing:0.06em;
+  color:var(--bone-dim);max-width:58ch;margin-top:26px;line-height:1.75;
+}
 
-  /* ---- record strip (light) ---- */
-  .record{background:var(--paper);color:var(--paper-ink);border-bottom:none;}
-  .record .kicker{color:var(--paper-ink);}
-  .record .note{font-family:var(--mono);font-size:.74rem;color:var(--paper-dim);letter-spacing:.04em;margin:0 0 2.4rem;text-transform:uppercase;}
-  .rec-row{display:grid;grid-template-columns:7.5rem 1fr 13rem;gap:.4rem 1.6rem;padding:1.15rem 0;border-top:1px solid var(--paper-rule);align-items:baseline;}
-  .rec-row:first-of-type{border-top:none;}
-  .rec-row .yr{font-family:var(--mono);font-size:.82rem;color:var(--wine);letter-spacing:.02em;}
-  .rec-row .rl{font-family:var(--serif);font-weight:700;font-size:1.12rem;line-height:1.2;}
-  .rec-row .rl span{font-family:var(--mono);font-size:.74rem;font-weight:400;text-transform:uppercase;letter-spacing:.1em;color:var(--paper-dim);display:block;margin-top:.3rem;}
-  .rec-row .rm{font-family:var(--mono);font-size:.82rem;color:var(--paper-ink);line-height:1.45;}
+.tri{margin-top:0;display:grid;gap:0;border-top:1px solid var(--line);}
+.tri--hero{margin-top:8px;border-top:none;}
+.tri--hero .tri-row{grid-template-columns:210px 1fr;padding:34px 0;border-top:1px solid var(--line);border-bottom:none;}
+.tri--hero .tri-row:last-child{border-bottom:1px solid var(--line);}
+.tri--hero .tri-a{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.28;letter-spacing:-0.01em;color:var(--bone);}
+.tri--hero .tri-a .who{color:var(--wound-lit);}
+.tri--hero .tri-q{padding-top:12px;}
+.tri-row{
+  display:grid;grid-template-columns:200px 1fr;gap:34px;
+  padding:26px 0;border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.tri-q{
+  font-family:var(--mono);font-size:0.72rem;font-weight:500;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--bone-dim);padding-top:6px;
+}
+.tri-a{font-size:1.24rem;line-height:1.5;color:var(--bone);}
+.tri-a .who{color:var(--bone);font-weight:700;}
+@media(max-width:640px){
+  .tri-row{grid-template-columns:1fr;gap:10px;}
+  .tri-q{padding-top:0;}
+}
 
-  /* ---- origin ---- */
-  .origin p{font-size:1.1rem;line-height:1.75;max-width:60ch;color:var(--bone-dim);margin:0 0 1.2rem;}
-  .origin p:last-child{margin:0;}
-  .origin p b{color:var(--bone);font-weight:700;}
+.seam{display:block;width:100%;height:40px;}
+.seam svg{display:block;width:100%;height:100%;}
 
-  /* ---- cta (burgundy) ---- */
-  .cta{background:var(--wine-deep);color:#fff;border-bottom:none;text-align:center;padding:clamp(4rem,9vw,7rem) 0;}
-  .cta h2{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 .6rem;max-width:20ch;margin-left:auto;margin-right:auto;}
-  .cta .say{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,2rem);color:#F3E4E0;margin:0 0 2.6rem;}
-  .cta .btn{background:#fff;color:var(--wine-deep);border-color:#fff;}
-  .cta .btn:hover{background:var(--bone);border-color:var(--bone);color:var(--wine-deep);}
-  .cta .contact{font-family:var(--mono);font-size:.88rem;letter-spacing:.05em;color:#EAC9C6;margin-top:2.2rem;}
-  .cta .contact a{color:#fff;}
-  .cta .contact a:hover{color:var(--bone);}
+.trap p{font-size:1.16rem;line-height:1.68;color:var(--bone);max-width:60ch;}
+.trap .verdict{
+  margin:38px 0;
+  font-size:clamp(1.9rem,4.6vw,3.1rem);
+  line-height:1.06;font-weight:700;letter-spacing:-0.014em;
+  color:var(--wound-lit);
+  max-width:18ch;
+}
 
-  /* ---- footer ---- */
-  footer{padding:clamp(2.6rem,6vw,3.6rem) 0;}
-  footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;align-items:baseline;justify-content:space-between;}
-  .foot-name{font-family:var(--serif);font-weight:700;color:var(--bone);}
-  .foot-name span{display:block;font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.06em;margin-top:.3rem;font-weight:400;}
-  .foot-stamp{font-family:var(--serif);font-style:italic;color:var(--bone-dim);font-size:1.05rem;}
+.pnl-grid{
+  display:grid;
+  grid-template-columns:1fr 1.5fr 1fr;
+  gap:18px;
+  margin-top:44px;
+  align-items:stretch;
+}
+.box{
+  background:var(--ink-2);
+  border:1px solid var(--line);
+  border-top:2px solid var(--wound);
+  padding:30px 28px;
+  display:flex;flex-direction:column;
+}
+.box--hero{background:var(--ink-3);}
+.box-n{
+  font-family:var(--mono);font-size:0.68rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--wound-lit);margin-bottom:16px;
+}
+.box-t{
+  font-size:1.28rem;font-weight:700;line-height:1.15;margin-bottom:16px;
+  letter-spacing:-0.01em;
+}
+.box p{font-size:1rem;line-height:1.62;color:var(--bone-dim);margin:0;}
+.box--hero .box-t{font-size:1.5rem;}
+.box--hero p{color:var(--bone);}
+.dagger{
+  margin-top:34px;padding:30px 0 0;border-top:1px solid var(--line);
+  font-size:1.28rem;line-height:1.5;color:var(--bone);max-width:62ch;
+}
+.dagger .end{color:var(--wound-lit);}
+@media(max-width:820px){
+  .pnl-grid{grid-template-columns:1fr;}
+}
 
-  @media (max-width:900px){
-    .receipts-grid{grid-template-columns:repeat(2,1fr);}
-    .proof .wrap{grid-template-columns:repeat(2,1fr);gap:2.4rem 2rem;}
-  }
-  @media (max-width:640px){
-    body{font-size:16px;}
-    .lanes{grid-template-columns:1fr;}
-    .receipts-grid{grid-template-columns:1fr;}
-    .proof .wrap{grid-template-columns:1fr 1fr;}
-    .rec-row{grid-template-columns:1fr;gap:.3rem;}
-    .rec-row .yr{order:-1;}
-    .rec-row .rm{margin-top:.6rem;padding-top:.6rem;border-top:1px dashed var(--paper-rule);}
-    .topbar a.top-cta{display:none;}
-  }
+.ticker{
+  position:relative;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:22px 0;
+  overflow:hidden;
+  white-space:nowrap;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+}
+.ticker--red{background:var(--wound-band);}
+.ticker--green{background:var(--suture-band);}
+.track{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:0.94rem;letter-spacing:0.01em;
+  will-change:transform;
+}
+.ticker--red  .track{animation:crawl-l 92s linear infinite;}
+.ticker--green .track{animation:crawl-l 78s linear infinite;}
+.ticker:hover .track{animation-play-state:paused;}
+@keyframes crawl-l{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+.tick{padding:0 4px;}
+.ticker--red .tick{color:var(--wound-lit);}
+.ticker--red .tick .fig{color:#E8A99B;font-weight:600;}
+.ticker--green .tick{color:var(--suture-lit);}
+.ticker--green .tick .cite{color:var(--bone-faint);}
+.sep{
+  padding:0 26px;font-size:0.8rem;
+  color:var(--wound);opacity:.7;
+}
+.ticker--green .sep{color:var(--suture);}
+
+.intervention{position:relative;}
+.suture-art{
+  margin:0 auto 54px;max-width:520px;
+}
+.suture-art svg{display:block;width:100%;height:auto;}
+.intervention .lede{font-size:1.22rem;line-height:1.62;max-width:60ch;}
+.that-is{
+  margin:36px 0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;
+  font-weight:700;letter-spacing:-0.015em;
+}
+.that-is .name{color:var(--suture-lit);}
+.eliminate{
+  margin-top:40px;
+  font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.16;font-weight:700;
+  letter-spacing:-0.012em;max-width:20ch;
+}
+
+.campaign-intro p{font-size:1.14rem;line-height:1.64;max-width:60ch;color:var(--bone);}
+.stages{margin-top:56px;display:grid;gap:0;border-top:1px solid var(--line);}
+.stage{
+  display:grid;grid-template-columns:96px 1fr;gap:30px;
+  padding:34px 0;border-bottom:1px solid var(--line);
+}
+.stage-n{
+  font-family:var(--mono);font-size:1.5rem;font-weight:600;
+  color:var(--suture-lit);letter-spacing:0.02em;line-height:1;
+}
+.stage-t{font-size:1.34rem;font-weight:700;margin-bottom:12px;letter-spacing:-0.01em;}
+.stage p{font-size:1.02rem;line-height:1.62;color:var(--bone-dim);margin:0;}
+.stage p .edge{color:var(--bone);}
+@media(max-width:640px){
+  .stage{grid-template-columns:1fr;gap:8px;}
+}
+.sovereign{
+  margin-top:60px;padding-top:40px;border-top:2px solid var(--suture);
+}
+.sovereign .eyebrow{margin-bottom:22px;}
+.sovereign p{font-size:1.24rem;line-height:1.55;color:var(--bone);max-width:60ch;}
+
+.move p{font-size:1.24rem;line-height:1.58;color:var(--bone);max-width:60ch;}
+.move .known{color:var(--bone);}
+.move .verdict{
+  margin:44px 0 40px;
+  font-size:clamp(2.4rem,6vw,4rem);line-height:1;font-weight:700;
+  letter-spacing:-0.02em;
+}
+.move .verdict .open{color:var(--bone-dim);display:block;font-size:0.5em;
+  letter-spacing:-0.005em;margin-bottom:10px;font-weight:700;}
+.cta{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--mono);font-size:0.82rem;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--ink);background:var(--bone);
+  text-decoration:none;padding:19px 30px;
+  border:1px solid var(--bone);
+  transition:background .22s ease,color .22s ease,transform .22s ease;
+}
+.cta:hover{background:transparent;color:var(--bone);transform:translateY(-2px);}
+.cta svg{width:16px;height:16px;display:block;}
+.cta:focus-visible{outline:2px solid var(--suture-lit);outline-offset:4px;}
+
+.foot{
+  border-top:1px solid var(--line);
+  padding:52px 0 60px;
+}
+.foot-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.foot .brand .wm{color:var(--bone);}
+.foot-meta{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--bone-faint);line-height:1.9;}
+.foot-link{color:var(--bone-dim);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease;}
+.foot-link:hover{color:var(--bone);border-bottom-color:var(--bone-faint);}
+.foot-link:focus-visible{outline:2px solid var(--suture-lit);outline-offset:3px;}
+.foot-cited{
+  font-family:var(--mono);font-size:0.78rem;letter-spacing:0.12em;
+  color:var(--bone-faint);text-decoration:none;border-bottom:1px solid transparent;
+  transition:color .2s ease,border-color .2s ease;
+}
+.foot-cited:hover{color:var(--bone-dim);border-bottom-color:var(--bone-faint);}
+.foot-cited:focus-visible{outline:2px solid var(--suture-lit);outline-offset:3px;}
+
+.hidden-media-square{
+  display:none;
+  max-width:320px;
+  aspect-ratio:1 / 1;
+  background:var(--ink);
+  margin:48px auto 0;
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.hidden-media-square video,
+.hidden-media-square iframe{
+  width:100%;
+  height:100%;
+  display:block;
+  background:var(--ink-2);
+}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;}
+  .ticker--red .track,.ticker--green .track{animation:none;transform:translateX(0);}
+  .reveal{opacity:1;transform:none;transition:none;}
+}
 </style>
 </head>
 <body>
-<a class="skip" href="#work">Skip to the work</a>
 
-<div class="topbar">
-  <div class="wrap">
-    <div class="brand">Federico Leff Bejar<span>KIT55 Soma</span></div>
-    <a class="top-cta" href="mailto:fred.leff@kit55soma.com">Start a conversation</a>
-  </div>
-</div>
+<a class="skip" href="#top">Skip to content</a>
 
-<div class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Interim &amp; Fractional Operating Executive</p>
-    <h1>The seam nobody owns.</h1>
-    <p class="sub">Interim and fractional operating leadership for the handoffs that bleed. Broken lines between procurement, operations, and sales, on both sides of the US Mexico border. <b>24 years of P&amp;L.</b> I install the system, then I leave.</p>
-    <div class="hero-cta">
-      <a class="btn" href="mailto:fred.leff@kit55soma.com?subject=Operating%20mandate">Start a conversation</a>
-      <a class="phone" href="tel:+18582577536">or call 858 257 7536</a>
-    </div>
-    <p class="cred"><b>24 years P&amp;L &nbsp;·&nbsp; 3 companies acquired &nbsp;·&nbsp; cross border operator &nbsp;·&nbsp; manufacturing, supply chain, consumer goods</b></p>
-  </div>
-</div>
+<!-- ============ STICKY MARK ============ -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="#top" aria-label="KIT55 SOMA home">
+    <svg class="mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="9" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
+      <circle cx="25" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
+      <path d="M13 17 L21 17" stroke="#66A98A" stroke-width="1.8" stroke-linecap="round"></path>
+      <path d="M15 14 L13 17 L15 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M19 14 L21 17 L19 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span class="wm-stack">
+      <span class="wm-1">KIT55</span>
+      <span class="wm-2">SOMA</span>
+    </span>
+  </a>
+  <span class="tag">Operational Resilience Engineering</span>
+</header>
 
-<div class="proof">
-  <div class="wrap">
-    <div class="stat"><span class="n">$30M</span><span class="l">Built in 14 months, 40 to 50% gross margin</span></div>
-    <div class="stat"><span class="n">$0<span class="arrow"> → </span>$12M</span><span class="l">New US entity, 3 years, acquired</span></div>
-    <div class="stat"><span class="n">$15M<span class="arrow"> → </span>$28M</span><span class="l">400 people, 3 plants, union floor</span></div>
-    <div class="stat"><span class="n">3</span><span class="l">Companies acquired on my watch</span></div>
-  </div>
-</div>
+<main id="top">
 
-<div class="section" id="work">
-  <div class="wrap">
-    <h2 class="kicker">Everyone is telling the truth. The system is lying.</h2>
-    <p class="lead">Margin does not bleed inside a department. It bleeds in the handoff. Procurement optimizes procurement. Operations optimizes operations. Sales optimizes sales. Each one is doing its job, and the transaction between them is nobody's job. That gap is where the dead lines, the missed dates, and the eroding margin live. <b>I find the gap and I own it until it holds.</b> Then I hand you a system that runs without me and I leave.</p>
-  </div>
-</div>
-
-<div class="section">
-  <div class="wrap">
-    <p class="eyebrow">How I operate</p>
-    <h2 class="kicker">Two lanes, one instinct.</h2>
-    <div class="lanes">
-      <div class="lane-card">
-        <p class="idx">Lane 01</p>
-        <h3>The channel<span>One buyer, twenty years.</span></h3>
-        <p>Three companies, three unrelated products, the same lodging buyer every time. San Diego Valet, Al Phillips, Blue Iceberg. Linen service, then dry cleaning, then consumer goods into hotels, and the buyer never changed. <b>I can walk into a hotel group and I already know who signs.</b></p>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Where the money bleeds</p>
+    <h1 id="hero-h" class="reveal in">Typical fragmented arrangement.</h1>
+    
+    <div class="tri tri--hero">
+      <div class="tri-row reveal in">
+        <div class="tri-q">Where is it bleeding</div>
+        <div class="tri-a">In the handoffs between departments, vendors, and functions that nobody owns end-to-end. Where responsibility goes to die.</div>
       </div>
-      <div class="lane-card">
-        <p class="idx">Lane 02</p>
-        <h3>The border<span>Won on delivery, not on price.</span></h3>
-        <p>The same discipline where the commodity crosses a line and the sale is won on the certainty it arrives. Goodco, Tasoro, Suncast, Arizona Partsmaster. A US entity, Mexican production, and me personally liable in the seam. USMCA, landed cost, brokerage, FOB Laredo, door to door. <b>It requires having been on the hook on both sides.</b></p>
+      <div class="tri-row reveal in">
+        <div class="tri-q">Why is it happening</div>
+        <div class="tri-a">Because every entity optimizes its own scope. They all hit their numbers. The project pays for the space between them.</div>
+      </div>
+      <div class="tri-row reveal in">
+        <div class="tri-q">Who stops it</div>
+        <div class="tri-a"><span class="who">KIT55 SOMA.</span> We plug the leak, then engineer the infrastructure that keeps it plugged long after we're gone.</div>
       </div>
     </div>
+    
+    <p class="hero-sub reveal in">KIT55 SOMA is an interim operational leadership unit. We locate every hidden seam — inside one organization or across borders — expose the bleed, impose structural order, and engineer the permanent infrastructure so accountability becomes continuous and the project actually delivers. Construction, multifamily, supply chain, warehousing, back office, and any operation where local success destroys the total outcome.</p>
   </div>
+</section>
+
+<!-- seam divider: bleeding -->
+<div class="seam wrap" aria-hidden="true">
+  <svg viewBox="0 0 760 40" preserveAspectRatio="none">
+    <line x1="0" y1="20" x2="352" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
+    <line x1="408" y1="20" x2="760" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
+    <path d="M380 20 L380 39" stroke="var(--wound)" stroke-width="1.6"></path>
+    <circle cx="380" cy="20" r="2.2" fill="var(--wound)"></circle>
+  </svg>
 </div>
 
-<div class="section">
+<!-- ============ FRAGMENTATION TRAP ============ -->
+<section class="section trap" aria-labelledby="trap-h">
   <div class="wrap">
-    <p class="eyebrow">Proof, not adjectives</p>
-    <h2 class="kicker">The receipts.</h2>
-    <p class="lead">Nine situations. Something structural broke, someone senior called, and I owned the seam that fixed it. Client names held back here and named in the room.</p>
-    <div class="receipts-grid">
+    <p class="eyebrow">The Fragmentation Trap</p>
+    <h2 id="trap-h" class="reveal in">Every CEO falls for the same operational illusion.</h2>
+    <p class="reveal in" style="margin-top:30px;">You split the operation into specialized entities because conventional wisdom says specialization equals efficiency. Independent procurement. Isolated logistics brokers. Standalone sales forces. Subcontracted trades. You think you're building an elite network.</p>
+    <p class="verdict reveal in">You're building a circular firing squad.</p>
+    <p class="reveal in">Fragmentation happens the moment leadership decides that managing isolated, competing teams is safer than engineering a unified operation. That decision feels like control. It's the fatal mistake.</p>
+  </div>
+</section>
 
-      <div class="rc"><p class="ex">Exhibit 01</p><h4>A publicly traded real estate operator</h4><p>Brokers sold as individuals and signature volume stayed invisible until the trimester closed. Rebuilt how they sold. Teams on a collective quota, volume visible months out.</p><div class="res">600+ leases · #2 in the division</div></div>
+<!-- ============ P&L BOXES ============ -->
+<section class="section section--tight" aria-labelledby="pnl-h">
+  <div class="wrap">
+    <p class="eyebrow">How fragmentation silently kills your P&amp;L</p>
+    <h2 id="pnl-h" class="reveal in">Every entity hits its number. The transaction still loses money.</h2>
 
-      <div class="rc"><p class="ex">Exhibit 02</p><h4>A builder going to market as an installer</h4><p>A branded line with no factory, defensible only on sourcing and delivery. Moved the base from 100% Asia to 65/35 Asia and Mexico, kitted stateside.</p><div class="res">$30M in 14 months · 40 to 50% GM</div></div>
+    <div class="pnl-grid">
+      <div class="box reveal in">
+        <div class="box-n">The subcontractor illusion</div>
+        <div class="box-t">You didn't shift the risk. You multiplied the seams.</div>
+        <p>You outsource execution to a web of independent vendors, believing you've shifted the risk. What you've actually done is multiply the seams — and the seams are exactly where critical data, customs documentation, and timing disappear.</p>
+      </div>
 
-      <div class="rc"><p class="ex">Exhibit 03</p><h4>A US entity standing up in COVID</h4><p>$25K China containers on six cent items while a plant sat idle. Built the Texas entity, the regulatory structure, and four consumer brands.</p><div class="res">$0 to $12M in 3 years · acquired</div></div>
+      <div class="box box--hero reveal in">
+        <div class="box-n">The change order nobody carried</div>
+        <div class="box-t">One change. Five entities. Every one did its job.</div>
+        <p>Design changes a spec and tells the client it's handled. Nobody tells procurement. Procurement keeps buying to the old spec, so the material's wrong on arrival. The factory needs three more months to remake it. Logistics expedites the replacement at a premium to save the date. Sales discounts the delay to keep the client. Every one of them technically did their job. The project ate the cost.</p>
+      </div>
 
-      <div class="rc"><p class="ex">Exhibit 04</p><h4>A laundry carrying concentration risk</h4><p>Thirteen hotels under one signature. Closed the risk in one move with a ten hotel casino group, then built the scheduling system that held a 48 hour constraint.</p><div class="res">$15M to $28M · 400 people</div></div>
+      <div class="box reveal in">
+        <div class="box-n">The accountability vacuum</div>
+        <div class="box-t">Everyone is innocent. The money is still gone.</div>
+        <p>When a shipment stalls or a margin drops, the fragmented structure hands everyone a perfect alibi. The carrier blames the broker. The broker blames the factory. Your team blames the macro environment. Nobody lied. You still got robbed.</p>
+      </div>
+    </div>
 
-      <div class="rc"><p class="ex">Exhibit 05</p><h4>An electronics distributor being commoditized</h4><p>$5K on a pallet against $300K for the tech firms. Told the President to sell a service, not a product. Built digital signage from a cold start.</p><div class="res">Division acquired · integration run</div></div>
+    <p class="dagger reveal in">Fragmentation turns your overhead into a game of hot potato. Your profit is what's being tossed. <span class="end">Nobody's left holding responsibility — only your cash reserve.</span></p>
+  </div>
+</section>
 
-      <div class="rc"><p class="ex">Exhibit 06</p><h4>A hotel laundry at a hard ceiling</h4><p>A fixed bottleneck at 100 lbs dry cleaning and 10,000 lbs of whites per hour. Ran to the bottleneck plus a buffer and added shifts on an asset already paid for.</p><div class="res">$1.5M to $4.5M · acquired</div></div>
+<!-- ============ RED TICKER — THE BLEED ============ -->
+<section class="bleed ticker ticker--red" aria-label="The cost of fragmentation, in figures">
+  <div class="track" id="redtrack"></div>
+</section>
 
-      <div class="rc"><p class="ex">Exhibit 07</p><h4>A one SKU US arm of a Mexican maker</h4><p>Sent to sell a product that was dead in the US on decorum and liability. Read the room and won on structure through trickle distribution, not on price.</p><div class="res">~$6M · 250 location remodel</div></div>
+<!-- ============ INTERVENTION ============ -->
+<section class="section intervention" aria-labelledby="int-h">
+  <div class="wrap">
+    <div class="suture-art draw reveal in" aria-hidden="true">
+      <svg viewBox="0 0 520 150" fill="none">
+        <line x1="0" y1="75" x2="150" y2="75" stroke="var(--line-strong)" stroke-width="1" style="--len:150"></line>
+        <line x1="370" y1="75" x2="520" y2="75" stroke="var(--line-strong)" stroke-width="1" style="--len:150"></line>
+        <circle cx="260" cy="75" r="7" fill="var(--suture)"></circle>
+        <path d="M253 75 C220 60,190 66,150 75" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
+        <path d="M255 80 C224 96,192 92,150 82" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
+        <path d="M267 75 C300 60,332 66,370 75" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
+        <path d="M265 80 C298 96,334 92,370 82" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
+        <path d="M260 68 C250 44,246 30,250 14" stroke="var(--suture-lit)" stroke-width="1.3" style="--len:70"></path>
+        <path d="M260 82 C270 108,266 124,262 138" stroke="var(--suture-lit)" stroke-width="1.3" style="--len:70"></path>
+        <circle cx="150" cy="75" r="2.4" fill="var(--suture-lit)"></circle>
+        <circle cx="370" cy="75" r="2.4" fill="var(--suture-lit)"></circle>
+      </svg>
+    </div>
 
-      <div class="rc"><p class="ex">Exhibit 08</p><h4>A roto molding maker shut down overnight</h4><p>A gas restriction killed production and the tooling was proprietary. Sourced steel molds to their geometry and made five factories behave as one vendor.</p><div class="res">750 units/truck · standing nearshore arm</div></div>
+    <p class="eyebrow eyebrow--suture">The Intervention</p>
+    <p class="lede reveal in">When your teams are pointing fingers and your profit is slipping through the seams, you do not need more advice. You need an intervention.</p>
+    <p class="lede reveal in">You need a singular, unyielding presence to step into the breach, seize the chaos, and impose structural order.</p>
+    <p class="that-is reveal in">That is <span class="name">KIT55 SOMA.</span></p>
+    <p class="reveal in">We enter with zero corporate noise and the deliberate force required to find every place you are bleeding and stop it for good.</p>
+    <p class="eliminate reveal in">We do not negotiate between your siloed entities — whether those entities sit in different departments, different sites, or different countries. We eliminate the space between them.</p>
+  </div>
+</section>
 
-      <div class="rc"><p class="ex">Exhibit 09</p><h4>A parts distributor with a severed China lane</h4><p>COVID took the China lane out entirely. Rebuilt the line in Mexico, held spec, ran QA on the floor. Door to door, sequenced to the delivery map.</p><div class="res">$6.88M across 11 POs</div></div>
+<!-- seam divider: sutured -->
+<div class="seam wrap" aria-hidden="true">
+  <svg viewBox="0 0 760 40" preserveAspectRatio="none">
+    <line x1="0" y1="20" x2="352" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
+    <line x1="408" y1="20" x2="760" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
+    <path d="M352 20 C368 12,392 12,408 20" stroke="var(--suture-lit)" stroke-width="1.3"></path>
+    <path d="M352 20 C368 28,392 28,408 20" stroke="var(--suture-lit)" stroke-width="1.3"></path>
+    <circle cx="380" cy="20" r="2.2" fill="var(--suture-lit)"></circle>
+  </svg>
+</div>
 
+<!-- ============ CAMPAIGN ============ -->
+<section class="section campaign" aria-labelledby="camp-h">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--suture">The Terms of Engagement</p>
+    <div class="campaign-intro">
+      <p class="reveal in">KIT55 SOMA does not blend into your corporate background. We do not join committees. We do not play internal politics. We do not write slide decks to justify our presence.</p>
+      <p class="reveal in">We operate with structural precision and unyielding force. We enter with one objective: to locate every fissure where your capital is buried, exhume the truth, and lock down the execution perimeter.</p>
+      <p class="reveal in" style="color:var(--bone);">This is not a collaborative brainstorming exercise. This is operational resilience engineering.</p>
+    </div>
+
+    <div class="stages">
+      <div class="stage reveal in">
+        <div class="stage-n">01</div>
+        <div>
+          <div class="stage-t">Forensic Detection</div>
+          <p>We audit the seams. We map the exact handoffs between procurement, cross-border logistics, and your commercial teams to find where data drops and money leaks. <span class="edge">Cross-border is the seam most operators cannot reach. KIT55 SOMA operates on both sides of it</span> — in language, in relationship — where the documentation and the timing actually disappear. If an entity or a vendor has been hiding behind an operational blind spot, we expose the fissure.</p>
+        </div>
+      </div>
+      <div class="stage reveal in">
+        <div class="stage-n">02</div>
+        <div>
+          <div class="stage-t">Execution Alignment</div>
+          <p>We forcefully close the gaps. We bridge the disconnect between your sales promises and your physical execution capability. <span class="edge">We kill the storage fees and the local-optimization traps that make every entity look efficient while the transaction loses money.</span> The isolated fiefdoms are dismantled and integrated into a single, synchronized engine engineered to protect your total margin.</p>
+        </div>
+      </div>
+      <div class="stage reveal in">
+        <div class="stage-n">03</div>
+        <div>
+          <div class="stage-t">Infrastructure Hardening</div>
+          <p>We build the permanent fortress. We do not patch leaks for the quarter. We engineer the operational architecture, vet the subcontractor networks, and harden the supply-chain pipelines <span class="edge">so fragmentation can never take root again.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sovereign reveal in">
+      <p class="eyebrow eyebrow--suture">The Sovereign Standard</p>
+      <p>We do not create dependency. Our success is measured by the absolute autonomy of the systems we leave behind. We establish order. We embed the engineered infrastructure. We exit — leaving your P&amp;L insulated against the chaos of the market.</p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section record">
+<!-- ============ GREEN TICKER — THE CURE ============ -->
+<section class="bleed ticker ticker--green" aria-label="The proof that alignment works, with sources">
+  <div class="track" id="greentrack"></div>
+</section>
+
+<!-- ============ YOUR MOVE ============ -->
+<section class="section move" aria-labelledby="move-h">
   <div class="wrap">
-    <h2 class="kicker">The record.</h2>
-    <p class="note">// Named, dated, defensible. Most recent first.</p>
-
-    <div class="rec-row"><div class="yr">2022 — now</div><div class="rl">Co-Founder &amp; Principal<span>KIT55 Soma</span></div><div class="rm">Sourcing · interim exec · cross border logistics</div></div>
-    <div class="rec-row"><div class="yr">2024 — 2025</div><div class="rl">Sr. Director, International Sales<span>Tasoro · KIT55 partnership</span></div><div class="rm">$30M / 14 months · 40 to 50% GM</div></div>
-    <div class="rec-row"><div class="yr">2020 — 2023</div><div class="rl">Managing Partner, US Entity<span>Blue Iceberg Labs</span></div><div class="rm">$0 → $12M · 60%+ GM · acquired</div></div>
-    <div class="rec-row"><div class="yr">2015 — 2020</div><div class="rl">VP, Commercial Sales<span>GICSA</span></div><div class="rm">600+ leases · reported to the Board</div></div>
-    <div class="rec-row"><div class="yr">2013 — 2015</div><div class="rl">VP, Audio Visual &amp; Digital Signage<span>Steren Electronics USA</span></div><div class="rm">Division acquired by CE Labs</div></div>
-    <div class="rec-row"><div class="yr">2010 — 2013</div><div class="rl">Director, US Market<span>Goodco</span></div><div class="rm">~$6M remodel · 250 locations</div></div>
-    <div class="rec-row"><div class="yr">2007 — 2010</div><div class="rl">VP, Sales, Marketing &amp; Operations<span>Al Phillips the Cleaner</span></div><div class="rm">$15M → $28M · 3 plants</div></div>
-    <div class="rec-row"><div class="yr">2002 — 2007</div><div class="rl">Director of Operations, then Sales<span>San Diego Valet Service</span></div><div class="rm">$1.5M → $4.5M · acquired</div></div>
+    <p class="reveal in"><span class="known">You already know where it hurts. You have known for quarters.</span></p>
+    <p class="reveal in">The only question left is whether you will keep blaming the market, or finally let someone stop the bleed. Every day you spend tolerating the friction is a day you choose to lose capital. The operational fissures are wide open, and your entities are running out of alibis.</p>
+    <p class="reveal in">We do not accept every engagement. We only step into operations where the leadership is ready to trade the chaos for command.</p>
+    <p class="verdict reveal in" id="move-h"><span class="open">The seam is open.</span>Your move.</p>
+    <div class="offer reveal in">
+      <p class="offer-h">The Forensic Assessment</p>
+      <p>Ten working days. One live program. We map every handoff, quantify the bleed in dollars and days, and hand you a written execution perimeter you can run with us or without us.</p>
+      <p class="terms">Fixed fee. No retainer. No deck.</p>
+    </div>
+    <div class="cta-row reveal in">
+      <a class="cta" href="mailto:office@kit55soma.com?subject=Forensic%20Assessment" aria-label="Request the forensic assessment by email">
+        Request the Forensic Assessment
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a class="cta-alt" href="tel:+18587442700">Or call 858-744-2700</a>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="section origin">
-  <div class="wrap">
-    <p class="eyebrow">Origin</p>
-    <p>Before any of it, a bench at the Salk Institute. I did molecular biology research in the Gleeson Lab during the Human Genome Project years.</p>
-    <p>That is where I learned to read a system by its anomalies. To find the one variable that moves everything downstream and leave the rest alone. <b>B.S. in Neurobiology and Physiology from UC San Diego, minor in World History.</b> No graduate degree. The lab is not here as a credential. It is here as the method.</p>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-row">
+    <a class="brand" href="#top" aria-label="KIT55 SOMA">
+      <svg class="mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="9" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
+      <circle cx="25" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
+      <path d="M13 17 L21 17" stroke="#66A98A" stroke-width="1.8" stroke-linecap="round"></path>
+      <path d="M15 14 L13 17 L15 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M19 14 L21 17 L19 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+      <span class="wm-stack">
+        <span class="wm-1">KIT55</span>
+        <span class="wm-2">SOMA</span>
+      </span>
+    </a>
+    <div class="foot-meta">
+      Cross-border operations · Supply-chain integration<br>
+      <a class="foot-link" href="mailto:office@kit55soma.com">office@kit55soma.com</a> · <a class="foot-link" href="tel:+18587442700">858-744-2700</a>
+    </div>
+    <span class="foot-cited">Every figure on this site is public record. Sources cited inline.</span>
+
+  <!-- 
+    HIDDEN MEDIA SQUARE (PRIVATE)
+    Only you can edit this. 
+    It is completely invisible on the live site.
+    To activate: 
+    1. Paste your video or note inside the div below
+    2. Change display:none to display:block
+    3. Commit
+  -->
+  <div id="hidden-media-square" class="hidden-media-square" style="display:none;">
+    <!-- Your private content goes here -->
   </div>
-</div>
 
-<div class="cta">
-  <div class="wrap">
-    <h2>Something in your operation is bleeding at a handoff.</h2>
-    <p class="say">Let's find it.</p>
-    <a class="btn" href="mailto:fred.leff@kit55soma.com?subject=Operating%20mandate">Start a conversation</a>
-    <p class="contact"><a href="mailto:fred.leff@kit55soma.com">fred.leff@kit55soma.com</a> &nbsp;·&nbsp; <a href="tel:+18582577536">858 257 7536</a></p>
-  </div>
-</div>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-name">Federico Leff Bejar<span>Co-Founder &amp; Principal · KIT55 Soma</span></div>
-    <div class="foot-stamp">The kit is complete. Or it isn't.</div>
   </div>
 </footer>
+
+<script>
+/* ---- ticker content ---- */
+var red = [
+  {t:"the money's still gone"},
+  {t:"$15.8 billion bleeds out every year",fig:["$15.8 billion"]},
+  {t:"the carrier blames the broker"},
+  {t:"9 of 10 projects overrun. for 70 years.",fig:["9 of 10","70 years"]},
+  {t:"you called it specialization"},
+  {t:"owners eat $10.6 billion of it",fig:["$10.6 billion"]},
+  {t:"the broker blames the factory"},
+  {t:"one missing signal cost the a380 $6 billion",fig:["$6 billion"]},
+  {t:"everyone hit their numbers. the deal lost money."},
+  {t:"you built a circular firing squad"},
+  {t:"18% cost growth every time nobody owns the seam",fig:["18%"]},
+  {t:"change orders eat 25% of a distressed job",fig:["25%"]},
+  {t:"your team blames the economy"},
+  {t:"half your plan won't happen. that's the average.",fig:["half"]},
+  {t:"nobody lied. you still got robbed."},
+  {t:"every rfi: $1,080 and two weeks gone",fig:["$1,080","two weeks"]},
+  {t:"specialization was supposed to make you efficient"},
+  {t:"the factory blames the port"},
+  {t:"it sits at the terminal racking fees while you discount the sale"},
+  {t:"rework quietly bills you 6% of the job",fig:["6%"]},
+  {t:"you thought you built an elite network"},
+  {t:"a dispute you could have prevented runs 16 months",fig:["16 months"]},
+  {t:"managing the chaos felt safer than ending it"},
+  {t:"everyone had a perfect alibi"},
+  {t:"the seam is where your margin goes to die"}
+];
+
+var green = [
+  {t:"$15.8B bled yearly from bad handoffs",c:"NIST, US Dept of Commerce"},
+  {t:"fix the seam and cost growth drops from 18% to 4%",c:"CII, 46 megaprojects"},
+  {t:"23% fewer medical errors when the handoff is owned",c:"NEJM, 2014"},
+  {t:"one source of truth. the a380 proved the $6B cost of skipping it",c:"Airbus, 2006"},
+  {t:"9 of 10 megaprojects overrun. the aligned ones don't",c:"Flyvbjerg, Oxford"},
+  {t:"BP Andrew: £80M under budget, six months early",c:"North Sea alliance, 1996"},
+  {t:"Toyota's aligned suppliers: 50% fewer defects",c:"Dyer & Nobeoka, 2000"},
+  {t:"preventable harm cut 30% by one shared protocol",c:"NEJM, 2014"},
+  {t:"Virginia-class subs: 30% cheaper on a single database",c:"US Navy program"},
+  {t:"target the cost up front, land 15% under market",c:"Ballard, 2012"},
+  {t:"dispute boards cut overruns nearly in half",c:"ASCE, ~3,000 projects"},
+  {t:"reference-class forecasting, now mandated",c:"UK Treasury"},
+  {t:"75% less inventory when the network shares one truth",c:"Dyer & Nobeoka, 2000"},
+  {t:"integrated delivery beat traditional on 14 metrics",c:"El Asmar, ASCE 2013"},
+  {t:"Toyota's suppliers: 124% more output per hour",c:"Strategic Management Journal"},
+  {t:"dispute boards: 98% never reach arbitration",c:"Dispute Resolution Board Fdn."},
+  {t:"3.5% contingency under target costing, vs 7.9%",c:"Do et al, 2014"},
+  {t:"the aligned North Sea field was called uneconomic for 20 years",c:"BP Andrew"}
+];
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function fig(text,figs){
+  var out = esc(text);
+  if(figs){figs.forEach(function(f){out = out.replace(esc(f),'<span class="fig">'+esc(f)+'</span>');});}
+  return out;
+}
+
+function buildRed(){
+  var html='';
+  for(var pass=0;pass<2;pass++){
+    red.forEach(function(item){
+      html+='<span class="tick">'+fig(item.t,item.fig)+'</span><span class="sep">&#8224;</span>';
+    });
+  }
+  return html;
+}
+function buildGreen(){
+  var html='';
+  for(var pass=0;pass<2;pass++){
+    green.forEach(function(item){
+      html+='<span class="tick">'+esc(item.t)+' <span class="cite">— '+esc(item.c)+'</span></span><span class="sep">+</span>';
+    });
+  }
+  return html;
+}
+document.getElementById('redtrack').innerHTML = buildRed();
+document.getElementById('greentrack').innerHTML = buildGreen();
+
+/* ---- sticky bar state ---- */
+var bar=document.getElementById('topbar');
+function onScroll(){ if(window.scrollY>40){bar.classList.add('scrolled');}else{bar.classList.remove('scrolled');} }
+window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+/* ---- reveal on scroll ---- */
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });
+},{threshold:0.16,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal,.draw').forEach(function(el){io.observe(el);});
+</script>
 
 </body>
 </html>
